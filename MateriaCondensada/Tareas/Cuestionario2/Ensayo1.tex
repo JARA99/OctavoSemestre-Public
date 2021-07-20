@@ -1,0 +1,126 @@
+\documentclass[11pt]{article}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Algunos Paquetes Necesarios 
+\usepackage{fancyhdr, graphicx, wrapfig,lipsum}
+\usepackage[utf8]{inputenc} % Tildes
+\usepackage[spanish]{babel} % Language
+\usepackage{babelbib} % Bibliografia español
+\usepackage[margin=1in]{geometry} % Margins														
+\usepackage{amssymb}
+\usepackage{amsmath, amsthm, amsfonts}
+\usepackage[table]{xcolor} % Color table
+\usepackage{longtable} % Table accross multiple pages
+\usepackage{hyperref}  % Use Hyperlinks
+\usepackage{enumerate} % Reduce space in enumerate
+\usepackage{txfonts}
+\setlength{\parindent}{0in}
+\decimalpoint
+
+\usepackage{cancel}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\myName}{Elementos del estilo \--- Resumen }
+\newcommand{\myDate}{Guatemala, 16 de julio de 2021}
+\newcommand{\myCourse}{Materia Condensada 1}
+
+
+%\newcommand{\R}{\mathbb{R}}
+%\newcommand{\F}{\mathbf{F}}
+%\newcommand{\vi}{\mathbf{\hat{i}}}
+%\newcommand{\vj}{\mathbf{\hat{j}}}
+%\newcommand{\vk}{\mathbf{\hat{k}}}
+%\newcommand{\op}{\sigma\sqrt{2\pi}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Tema - BEGIN
+\newtheoremstyle{Tema}% name of the style to be used
+  {5mm}% measure of space to leave above the theorem. E.g.: 3pt
+  {10mm}% measure of space to leave below the theorem. E.g.: 3pt
+  {}% name of font to use in the body of the theorem
+  {}% measure of space to indent
+  {\bfseries}% name of head font
+  {\newline}% punctuation between head and body
+  {30mm}% space after theorem head
+  {}% Manually specify head
+
+\theoremstyle{Tema} \newtheorem{Tema}{Tema} %%%%% Template para Temas
+\theoremstyle{Tema} \newtheorem{Serie}{Serie}              %%%%%  Template para Series de ejercicios
+\theoremstyle{Tema} \newtheorem{Ejercicio}{Ejercicio}    %%%%%  Template para Ejercicios
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Tema - END
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Encabezado - BEGIN %%%%%%%%%%
+\fancypagestyle{firststyle}
+{
+\renewcommand{\headrulewidth}{1.5pt}
+\fancyhead[R]{
+			\textbf{Universidad de San Carlos de Guatemala} \\
+			\textbf{Escuela de Ciencias Físicas y Matemáticas}\\
+			\textbf{\myCourse }  \\  %%%%%%%%%% Agregar nombre del curso 
+			\textbf{\myDate}   %%%%%%%%%%%%%%%%%%%%%% Agregar fecha en formato: Enero 15, 2015
+			}
+\fancyhead[L]{ 
+	\includegraphics[height=1.6 cm]{/home/jorgealejandro/Templates/ECFM.png} \\
+	\textbf{Jorge Alejandro Rodriguez Aldana}\\
+	\textbf{201804766} 
+	}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Encabezado - END %%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Encabezado (pagina 2 en adelante) - BEGIN %%%
+\fancypagestyle{allStyle}
+{
+\renewcommand{\headrulewidth}{1pt}
+\fancyhead[R]{
+			\emph{\myName $-$ \myCourse} %%%% Modificar número de examen parcial y nombre del curso
+			}
+\fancyhead[L]{}  
+\fancyfoot[C]{}
+\fancyfoot[R]{\thepage}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Encabezado (pagina 2 en adelante) - END %%%
+
+\date{}
+\setlength{\headheight}{0.8in} % fixes \headheight warning
+
+%%%%%%%%%%%%%%%%%%%%%%%% BEGIN %%%%%%%%%%%%%%
+\begin{document}
+
+\pagestyle{allStyle}
+
+\thispagestyle{firststyle}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Titulo - BEGIN
+\begin{center}
+\LARGE
+\textsc{\myName} % Modificar el Número del examen parcial
+\medskip
+\hrule height 1.5pt
+\end{center}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Instrucciones - BEGIN
+\vspace{0.1 in}
+
+Este artículo da una idea sobre el tipo de redacción que se busca cuando se está escribiendo para la revista \textit{Nature Physics. ``We regularly get queries about the minutiae of Nature Physics format, but what we really care about is that the papers are clear and accessibly written.''}\cite{NatElementsOfStyle}. Como bien lo dice la frase, lo que ellos buscan es una redacción clara y accesible para los lectores. Cada vez que se acepta un \textit{paper} para publicar, este es revisado, y la mayoría de las veces se hacen cambios en el estilo del texto.
+
+\medskip
+
+Comienza describiendo la importancia de un buen título, y haciendo una pregunta que me parece bastante buena  ``¿Por que a alguien le importaría leer mi \textit{papaer} pasado el título?''\cite{NatElementsOfStyle}. Aquí es donde vemos la importancia de un título llamativo e informativo (aunque más adelante habla sobre no exagerar con el fin de retener lectores).
+Después, le da un papel importante al primer párrafo, en el que se debe introducir y poner en contexto al lector. No es buena idea comenzar con la teoría y los métodos utilizados desde el principio, cualquier lector agradecerá que se le ponga en contexto del tema antes de comenzar a hablar de este.
+
+\medskip
+
+Debemos contar una historia con nuestro artículo, y aunque los detalles técnicos son importantes para la ciencia, no lo son para la narrativa. También se debe evitar el uso de prefijos innecesarios.
+Es importante no exagerar con el fin de emocionar al lector.
+
+\medskip
+
+Por último, habla sobre concluir las ideas, el último párrafo debe asentar lo aprendido por el lector, pero no debe ser un resumen de todo el párrafo.
+
+\bibliographystyle{ieeetr}% otras opciones {plain}
+\bibliography{Ref1}
+
+\end{document} %%%%%%%%%%%%%%%%%%%%%%%% BEGIN%%%%%%%%%%%%%%

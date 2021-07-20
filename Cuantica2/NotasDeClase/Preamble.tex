@@ -1,0 +1,94 @@
+\documentclass[11pt]{article}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Algunos Paquetes Necesarios 
+\usepackage{fancyhdr, graphicx, wrapfig,lipsum}
+\usepackage[utf8]{inputenc} % Tildes
+\usepackage[spanish]{babel} % Language
+\usepackage{babelbib} % Bibliografia español
+% \usepackage[margin=1in]{geometry} % Margins														
+\usepackage{amssymb}
+\usepackage{amsmath, amsthm, amsfonts}
+\usepackage[table]{xcolor} % Color table
+\usepackage{longtable} % Table accross multiple pages
+\usepackage{hyperref}  % Use Hyperlinks
+\usepackage{enumerate} % Reduce space in enumerate
+\usepackage{txfonts}
+\setlength{\parindent}{0in}
+\decimalpoint
+\usepackage{anysize}
+\marginsize{3cm}{3cm}{2.5cm}{3cm}
+
+\usepackage{cancel}
+\usepackage{multicol}
+\usepackage{float}
+\usepackage{physics}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\myName}{Mecánica Cuántica 2}
+\newcommand{\myDate}{Octavo Semestre 2021}
+\newcommand{\myCourse}{Mecánica Cuántica 2}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\conmutador}[2]{\left[\hat{#1},\hat{#2}\right]}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Encabezado - BEGIN %%%%%%%%%%
+\fancypagestyle{firststyle}
+{
+\renewcommand{\headrulewidth}{1.5pt}
+\fancyhead[R]{
+			\textbf{Universidad de San Carlos de Guatemala} \\
+			\textbf{Escuela de Ciencias Físicas y Matemáticas}\\
+			\textbf{\myCourse }  \\  %%%%%%%%%% Agregar nombre del curso 
+			\textbf{\myDate}   %%%%%%%%%%%%%%%%%%%%%% Agregar fecha en formato: Enero 15, 2015
+			}
+\fancyhead[L]{ 
+	\includegraphics[height=1.6 cm]{/home/jorgealejandro/Templates/ECFM.png}\\
+	\textbf{Jorge Alejandro Rodriguez Aldana}\\
+	\textbf{201804766} 
+	}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Encabezado - END %%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Encabezado (pagina 2 en adelante) - BEGIN %%%
+\fancypagestyle{allStyle}
+{
+\renewcommand{\headrulewidth}{1pt}
+\fancyhead[R]{
+			\emph{\myName $-$ \myCourse} %%%% Modificar número de examen parcial y nombre del curso
+			}
+\fancyhead[L]{}  
+\fancyfoot[C]{}
+\fancyfoot[R]{\thepage}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Encabezado (pagina 2 en adelante) - END %%%
+
+\date{}
+\setlength{\headheight}{0.8in} % fixes \headheight warning
+
+%%%%%%%%%%%%%%%%%%%%%%%% BEGIN %%%%%%%%%%%%%%
+\begin{document}
+
+\pagestyle{allStyle}
+
+\thispagestyle{firststyle}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Titulo - BEGIN
+\begin{center}
+\LARGE
+\textsc{\myName} % Modificar el Número del examen parcial
+\medskip
+\hrule height 1.5pt
+\end{center}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Instrucciones - BEGIN
+\vspace{0.1 in}
+
+\input{Content.tex}
+
+\end{document} %%%%%%%%%%%%%%%%%%%%%%%% BEGIN%%%%%%%%%%%%%%

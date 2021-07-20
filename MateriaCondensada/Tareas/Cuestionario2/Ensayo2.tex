@@ -1,0 +1,147 @@
+\documentclass[11pt]{article}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Algunos Paquetes Necesarios 
+\usepackage{fancyhdr, graphicx, wrapfig,lipsum}
+\usepackage[utf8]{inputenc} % Tildes
+\usepackage[spanish]{babel} % Language
+\usepackage{babelbib} % Bibliografia español
+\usepackage[margin=1in]{geometry} % Margins														
+\usepackage{amssymb}
+\usepackage{amsmath, amsthm, amsfonts}
+\usepackage[table]{xcolor} % Color table
+\usepackage{longtable} % Table accross multiple pages
+\usepackage{hyperref}  % Use Hyperlinks
+\usepackage{enumerate} % Reduce space in enumerate
+\usepackage{txfonts}
+\setlength{\parindent}{0in}
+\decimalpoint
+
+\usepackage{cancel}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\myName}{Guía para escribir un ensayo de física \--- Resumen }
+\newcommand{\myDate}{Guatemala, 16 de julio de 2021}
+\newcommand{\myCourse}{Materia Condensada 1}
+
+
+%\newcommand{\R}{\mathbb{R}}
+%\newcommand{\F}{\mathbf{F}}
+%\newcommand{\vi}{\mathbf{\hat{i}}}
+%\newcommand{\vj}{\mathbf{\hat{j}}}
+%\newcommand{\vk}{\mathbf{\hat{k}}}
+%\newcommand{\op}{\sigma\sqrt{2\pi}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Tema - BEGIN
+\newtheoremstyle{Tema}% name of the style to be used
+  {5mm}% measure of space to leave above the theorem. E.g.: 3pt
+  {10mm}% measure of space to leave below the theorem. E.g.: 3pt
+  {}% name of font to use in the body of the theorem
+  {}% measure of space to indent
+  {\bfseries}% name of head font
+  {\newline}% punctuation between head and body
+  {30mm}% space after theorem head
+  {}% Manually specify head
+
+\theoremstyle{Tema} \newtheorem{Tema}{Tema} %%%%% Template para Temas
+\theoremstyle{Tema} \newtheorem{Serie}{Serie}              %%%%%  Template para Series de ejercicios
+\theoremstyle{Tema} \newtheorem{Ejercicio}{Ejercicio}    %%%%%  Template para Ejercicios
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Tema - END
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Encabezado - BEGIN %%%%%%%%%%
+\fancypagestyle{firststyle}
+{
+\renewcommand{\headrulewidth}{1.5pt}
+\fancyhead[R]{
+			\textbf{Universidad de San Carlos de Guatemala} \\
+			\textbf{Escuela de Ciencias Físicas y Matemáticas}\\
+			\textbf{\myCourse }  \\  %%%%%%%%%% Agregar nombre del curso 
+			\textbf{\myDate}   %%%%%%%%%%%%%%%%%%%%%% Agregar fecha en formato: Enero 15, 2015
+			}
+\fancyhead[L]{ 
+	\includegraphics[height=1.6 cm]{/home/jorgealejandro/Templates/ECFM.png} \\
+	\textbf{Jorge Alejandro Rodriguez Aldana}\\
+	\textbf{201804766} 
+	}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Encabezado - END %%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Encabezado (pagina 2 en adelante) - BEGIN %%%
+\fancypagestyle{allStyle}
+{
+\renewcommand{\headrulewidth}{1pt}
+\fancyhead[R]{
+			\emph{\myName $-$ \myCourse} %%%% Modificar número de examen parcial y nombre del curso
+			}
+\fancyhead[L]{}  
+\fancyfoot[C]{}
+\fancyfoot[R]{\thepage}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Encabezado (pagina 2 en adelante) - END %%%
+
+\date{}
+\setlength{\headheight}{0.8in} % fixes \headheight warning
+
+%%%%%%%%%%%%%%%%%%%%%%%% BEGIN %%%%%%%%%%%%%%
+\begin{document}
+
+\pagestyle{allStyle}
+
+\thispagestyle{firststyle}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Titulo - BEGIN
+\begin{center}
+\LARGE
+\textsc{\myName} % Modificar el Número del examen parcial
+\medskip
+\hrule height 1.5pt
+\end{center}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Instrucciones - BEGIN
+\vspace{0.1 in}
+
+Muchos ven el proceso para escribir un ensayo como algo difícil, pero no tiene por que ser así necesariamente. 
+Antes de escribir un ensayo, debemos definir qué es un ensayo: ``un ensayo es un tipo de escritura que es usualmente más corta que un artículo y debe ser más fácil de leer para un nivel menos profesional.'' \cite{Guide}
+De cualquier modo, debe cumplir algunos requisitos.
+
+\medskip
+
+Para escoger un tema, se necesita un tiempo de investigación, y la elección de un tema interesante. Plantear el tema como una pregunta puede ser una buena idea.
+
+\medskip
+
+Existen distintos tipos de ensayos. Por ejemplo el descriptivo, que nos da una explicación detallada de un tema en específico. El de comparación y contraste, el cual nos enseña las similitudes y diferencias de los conceptos. El de proceso, usualmente es un experimento y el análisis de sus resultados. El narrativo, que es una descripción histórica. El de causa y efecto, que es una secuencia de eventos. Y el argumentativo, que trata de persuadir al lector de aceptar la posición del escritor.
+
+\medskip
+
+Podemos acomodar estos ensayos en tres grupos: Histórico, Física Fundamental e Investigación Moderna. 
+
+Cada uno de estos ensayos dicta un conocimiento básico del tema.
+
+Se debe ser preciso con los conceptos, si se necesita apoyo de gráficas o ecuaciones, deben ser escritas en un formato adecuado. Se debe citar los trabajos que sean copiados o parafraseados.
+
+\medskip
+
+Una estructura adecuada para un ensayo es la siguiente:
+
+\begin{enumerate}
+	\item Título 
+	\item Tesis
+	\item Introducción
+	\item Cuerpo
+	\item Conclusión
+\end{enumerate}
+
+\medskip
+
+Por último, el escritor debe revisar su trabajo terminado, y corregir errores de lógica y continuidad. Este proceso puede ser desafiante, pero una estrategia efectiva es usar una \textit{``checklist''} para la revisión.
+
+
+\bibliographystyle{ieeetr}% otras opciones {plain}
+\bibliography{Ref2}
+
+\end{document} %%%%%%%%%%%%%%%%%%%%%%%% BEGIN%%%%%%%%%%%%%%
