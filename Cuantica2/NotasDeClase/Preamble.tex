@@ -1,4 +1,4 @@
-\documentclass[11pt]{article}
+\documentclass[11pt]{book}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Algunos Paquetes Necesarios 
 \usepackage{fancyhdr, graphicx, wrapfig,lipsum}
 \usepackage[utf8]{inputenc} % Tildes
@@ -25,9 +25,12 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\newcommand{\myName}{Mecánica Cuántica 2}
+\newcommand{\myName}{{\Huge\textsc{Mecánica Cuántica 2}}}
 \newcommand{\myDate}{Octavo Semestre 2021}
 \newcommand{\myCourse}{Mecánica Cuántica 2}
+
+\title{\myName}
+\author{Jorge Alejandro Rodriguez Aldana}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -37,57 +40,59 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Encabezado - BEGIN %%%%%%%%%%
-\fancypagestyle{firststyle}
-{
-\renewcommand{\headrulewidth}{1.5pt}
-\fancyhead[R]{
-			\textbf{Universidad de San Carlos de Guatemala} \\
-			\textbf{Escuela de Ciencias Físicas y Matemáticas}\\
-			\textbf{\myCourse }  \\  %%%%%%%%%% Agregar nombre del curso 
-			\textbf{\myDate}   %%%%%%%%%%%%%%%%%%%%%% Agregar fecha en formato: Enero 15, 2015
-			}
-\fancyhead[L]{ 
-	\includegraphics[height=1.6 cm]{/home/jorgealejandro/Templates/ECFM.png}\\
-	\textbf{Jorge Alejandro Rodriguez Aldana}\\
-	\textbf{201804766} 
-	}
-}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Encabezado - END %%%%%%%%%%
+% \fancypagestyle{firststyle}
+% {
+% \renewcommand{\headrulewidth}{1.5pt}
+% \fancyhead[R]{
+% 			\textbf{Universidad de San Carlos de Guatemala} \\
+% 			\textbf{Escuela de Ciencias Físicas y Matemáticas}\\
+% 			\textbf{\myCourse }  \\  %%%%%%%%%% Agregar nombre del curso 
+% 			\textbf{\myDate}   %%%%%%%%%%%%%%%%%%%%%% Agregar fecha en formato: Enero 15, 2015
+% 			}
+% \fancyhead[L]{ 
+% 	\includegraphics[height=1.6 cm]{/home/jorgealejandro/Templates/ECFM.png}\\
+% 	\textbf{Jorge Alejandro Rodriguez Aldana}\\
+% 	\textbf{201804766} 
+% 	}
+% }
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Encabezado - END %%%%%%%%%%
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Encabezado (pagina 2 en adelante) - BEGIN %%%
-\fancypagestyle{allStyle}
-{
-\renewcommand{\headrulewidth}{1pt}
-\fancyhead[R]{
-			\emph{\myName $-$ \myCourse} %%%% Modificar número de examen parcial y nombre del curso
-			}
-\fancyhead[L]{}  
-\fancyfoot[C]{}
-\fancyfoot[R]{\thepage}
-}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Encabezado (pagina 2 en adelante) - END %%%
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Encabezado (pagina 2 en adelante) - BEGIN %%%
+% \fancypagestyle{allStyle}
+% {
+% \renewcommand{\headrulewidth}{1pt}
+% \fancyhead[R]{
+% 			\emph{\myName $-$ \myCourse} %%%% Modificar número de examen parcial y nombre del curso
+% 			}
+% \fancyhead[L]{}  
+% \fancyfoot[C]{}
+% \fancyfoot[R]{\thepage}
+% }
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Encabezado (pagina 2 en adelante) - END %%%
 
-\date{}
-\setlength{\headheight}{0.8in} % fixes \headheight warning
+% \date{}
+% \setlength{\headheight}{0.8in} % fixes \headheight warning
 
 %%%%%%%%%%%%%%%%%%%%%%%% BEGIN %%%%%%%%%%%%%%
 \begin{document}
 
-\pagestyle{allStyle}
+% \pagestyle{allStyle}
 
-\thispagestyle{firststyle}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Titulo - BEGIN
-\begin{center}
-\LARGE
-\textsc{\myName} % Modificar el Número del examen parcial
-\medskip
-\hrule height 1.5pt
-\end{center}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \thispagestyle{firststyle}
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Titulo - BEGIN
+% \begin{center}
+% \LARGE
+% \textsc{\myName} % Modificar el Número del examen parcial
+% \medskip
+% \hrule height 1.5pt
+% \end{center}
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Instrucciones - BEGIN
-\vspace{0.1 in}
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Instrucciones - BEGIN
+% \vspace{0.1 in}
+
+\maketitle
 
 \input{Content.tex}
 

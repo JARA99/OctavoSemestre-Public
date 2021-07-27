@@ -1,1 +1,203 @@
-\section{Bla}
+\chapter{Simetrías y reglas de conservación}
+
+\section{}
+
+\section{}
+
+\section{Grupo no-conmutativo: las rotaciones y el momentum angular}
+
+Aplicar propiedades generales a problemas específicos, pero el grupo de rotaciones no es conmutativo.
+
+Suponer un hamiltoniano $\hat{H}$ invariante ante rotaciones:
+
+\begin{align*}
+    \left[\hat{R}_{\vec{\mu}}(\alpha),\hat{H}\right]&=0\\ 
+    \left[\hat{R}_{\vec{\mu}}(\alpha),\hat{U}(t)\right]&=0
+\end{align*}
+
+Tomamos una rotación de un ángulo $\alpha$ al rededor de $z$:
+
+\begin{align*}
+    \phi'(r,\theta,\phi)
+        &=\hat{R}_z(\alpha)\phi(r,\theta,\phi)\\
+        &=\phi(r,\theta,\phi+\alpha)
+\end{align*}
+
+Por definición de generador, el generador $\hat{L}_z$ es tal que $\hat{R}_z(\alpha)=\exp\left(-\frac{i}{\hbar}\hat{L}_z\alpha\right)$.
+
+\subsection{Escritura vectorial}
+
+\begin{align*}
+    \hat{\vec{L}}=\hat{\vec{r}}\times\hat{\vec{p}}=
+    \begin{cases}
+        \hat{L}_x=\hat{y}\hat{P}_z-\hat{z}\hat{P}_y=-i\hbar(y\dd z-z\dd y)\\
+        \hat{L}_y=\hat{z}\hat{P}_x-\hat{x}\hat{P}_z=-i\hbar(z\dd x-x\dd z)\\
+        \hat{L}_z=\hat{x}\hat{P}_y-\hat{x}\hat{P}_y=-i\hbar(x\dd y-y\dd x)
+    \end{cases}
+\end{align*}
+
+\subsection{Relaciones de conmutación}
+
+Las relaciones de conmutación de $\hat{\vec{L}}$ están dadas por:
+
+\begin{equation}
+    \left[\hat{L}_i,\hat{L}_j\right]=i\hbar\varepsilon_{ijk}\hat{L}_k
+\end{equation}
+
+\subsection{Espacio de representaciones}
+
+Un espacio invariante ante un grupo de transformaciones, se le llama espacio de representaciones del grupo.
+Puede ser reducible si existe una suma directa de subespacios que sean invariantes ante este mismo grupo.
+
+\subsubsection{Espacio de representaciones irreducibles de un grupo conmutativo}
+
+\textbf{Propiedad:} Todas las representaciones irreducibles son de dimensión 1.
+
+\subsubsection{Espacio de representaciones irreducibles de los grupos de rotación $SU(2)$ y  $SO(3)$}
+
+Nos vamos a interesar en los generadores de rotaciones (operadores hermíticos y unitarios).
+
+\textbf{Propiedad:}
+Sean $\hat{J_x},\hat{J_y},\hat{J_z}$  operadores autoadjuntos en un espacio de Hilbert $\mathbb{H}$ que verifican el álgebra de Lie del grupo de rotaciones:
+
+\begin{align}
+    \left[J_i,J_j\right]=i\hbar\varepsilon_{ijk}\hat{J}_k
+\end{align}
+
+entonces ${\hat{\vec{J}}}^2$ conmuta con los elementos del álgebra de Lie.
+
+\begin{align*}
+    \left[{\hat{\vec{J}}}^2,\hat{J_i}\right]=0 \text{ para } i=x,y,z
+\end{align*}
+
+El espectro común de $J_z$ y $\vec{J}^2$ es de la forma:
+
+\begin{align}
+    \vec{J}^2\ket{j,m}&=\hbar^2j(j+1)\ket*{j,m}\\
+    J_z\ket*{j,m}&=
+\end{align}
+
+Definimos los operadores escalón:
+
+\begin{align*}
+    J_+&=J_x+iJ_y\\
+    J_-&=J_x-iJ_y
+\end{align*}
+
+Y notamos que $J_+^\dagger=J_-$
+
+Las relaciones de conmutación:
+
+\begin{align*}
+    \left[J_+,J_-\right]&=2\hbar J_z\\
+    \left[J_z,J_\pm\right]&=\pm \hbar J_{pm}\\
+    \left[\vec{J}^2,J_{\pm}\right]&=0
+\end{align*}
+
+\medskip
+
+
+Con $j$ fijo, los vectores $\ket*{j,m}$, con $m=-j,\cdots,j$ forman una base ortonormal $(\bra*{j,m}\ket*{j,n}=\delta_{mn})$ de un espacio vectorial $D_j$ de dimensión $j+1$ y el espacio $D_j$ es un espacio de representaciones irreducibles del grupo de rotación.
+
+Todo espacio de representaciones del grupo de rotaciones puede descomponerse como la suma de espacios irreducibles $$H=D_{j1} \oplus D_{j2} \oplus\cdots$$ (con índices que pueden repetirse).
+
+\bigskip
+
+\hspace{1cm}\textbf{Nota:} Los 3 generadores $J_x,J_y,J_z$ forman una base del álgebra de Lie llamada álgebra de Lie $SO(3)$ o $SU(2)$. Los generadores $J_x,J_y,J_z$ forman otra base de la misma álgebra más interesante. A esta base se le llama descomposición de Cartan de $SU(2)$, $SO(3)$ complejificada.
+
+Tenemos que:
+
+\begin{align*}
+    J_z\left(J_\pm \ket*{a,m}\right)
+        &=\left(\left[J_z,J_\pm\right]+J_\pm J_z\right)\ket*{a,m}\\
+        &=\pm \hbar J_\pm \ket*{a,m}+\hbar mJ_\pm\ket*{a,m}\\
+        &=\hbar(\pm1+m)J_\pm\ket*{a,m}
+\end{align*}
+
+por otro lado,
+
+\begin{align*}
+    \vec{J}^2\left(J_\pm\ket*{a,m}\right)=J_\pm \vec{J}^2 \ket*{a,m}=\hbar^2aJ_\pm\ket*{a,m}
+\end{align*}
+
+\textbf{Nota:}
+
+\begin{align*}
+    \vec{J}^2=\frac{1}{2}\left(J_+J_-+J_-J_+\right)J_z^2
+\end{align*}
+
+Entonces notemos que:
+
+\begin{align*}
+    \hbar^2(a-m^2)
+        &=\bra{a,m}\vec{J}^2-J_z^2\ket{a,m}\\
+        &=-\frac{1}{2}\bra{a,m}\left(J_+J_-+J_-J_+\right)\ket{a,m}\\
+        &\geq 0\\
+    a&\geq m^2
+\end{align*}
+
+Existe un valor máximo de $m:m_{max}$, y por tanto un mínimo. 
+
+Esto se traduce en:
+
+\begin{align*}
+    J_+\ket{a,m_{max}}&=0\\
+    J_-\ket{a,m_{min}}&=0
+\end{align*}
+
+Por otro lado,
+
+\begin{align*}
+    \vec{J^2}
+        &=J_z^2+\frac{1}{2}\left(J_+J_-+J_-J_+\right)\\
+        &=J_z^2+J_+J_--\hbar J_z
+\end{align*}
+
+Aplicamos la relación a $\ket{a,m_{max}}$ y a $\ket{a,m_{min}}$:
+
+\begin{align*}
+    \vec{J}^2\ket{a,m_{max}}
+        &=\hbar^2a^2\ket{a,m_{max}}\\
+        &=\\
+        &=\hbar^2 m_{max} (m_{max}+1)\ket{a,m_{max}}
+\end{align*}
+
+$$a^2=m_{max}(m_{max}+1)$$
+
+de igual manera $a^2=m_{min}(m_min-1)$.
+
+\medskip
+
+Dado que $J_z\left(J_{\pm}\ket{a,m}\right)=\hbar(\pm1+m)(J_\pm\ket{a,m})$ podemos definir:
+
+\begin{align}
+    \ket{a,m=m\pm1}=\frac{1}{c_\pm}J_\pm\ket{a,m}
+\end{align}
+
+podemos intuir que $m_{max}=m_{min}+n$ con $n\in \mathbb{N}$ entonces:
+
+\begin{align}
+    a^2=m^2_{max}+m_{max}=m_{min}^2+m_{min}
+\end{align}
+
+De esto: $m_{min}=-\frac{n}{2}$ y por tanto $m_{max}=m_{min}+n=\frac{n}{2}=j$.
+
+Por tanto $m=-j,-j+1,\cdots,j-1,j$ y tenemos $(2j+1)$ valores posibles.
+
+Ahora la normalización $c_\pm$, si $\ket{j,m}$ está normalizado,
+
+\begin{align*}
+    \abs{c_{\pm}}^2\norm*{\ket{j,m+1}}^2
+        &=\bra{j,m}J_-J_+\ket{j,m}\\
+        &=\hbar^2 \left(j(j+1)-m(m+1)\right)
+\end{align*}
+
+de igual manera para $c_-$.
+
+Por tanto, cada espacio $D_j$ es de dimensión $(2j+1)$ y los operadores $J_\pm$, $J_z$ actúan dentro de $D_j$ al igual que $J_x,J_y,J_z$ que se obtienen por medio de combinaciones lineales. 
+
+$D_j$ es invariante ante rotaciones: es un espacio de representación del grupo de rotación.
+
+Cada $D_j$ no puede descomponerse en la suma de 2 espacios. 
+
+\hfill$\qed$
