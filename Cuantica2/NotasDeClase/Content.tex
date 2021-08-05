@@ -394,4 +394,62 @@ Esta propiedad resulta muy útil en física molecular: conociendo las representa
 
 Espectro $\Rightarrow $ grupo de simetría $\Rightarrow$ forma de la molécula.
 
+\textbf{Ejemplo: El espectro del átomo de hidrógeno}
+
+\textit{Repaso:}
+
+\begin{align*}
+    \hat{H}=\frac{\hat{\vec{p}}^2}{2m}-\frac{e^2}{4\pi\epsilon_o}\frac{1}{r} 
+\end{align*}
+
+por el momento no tomamos en cuenta el espín. $\hat{H}$ es invariante ante rotaciones: $\left[\hat{H},\hat{T}\right]=0$. El espectro es tal que:
+
+\begin{align*}
+    \hat{H}\ket{\psi_{n,l,m}}=E_n\ket{\psi_{n,l,m}}   
+\end{align*}
+
+
+los autovectores son el producto de una función radial y de armónicos esféricos:
+
+\begin{align*}
+    \bra{x}\ket{\psi_{n,l,m}}=R_{n,l}(r)Y_{l,m}(\theta,\psi)
+\end{align*}
+
+Con $E_n=$
+
+Cada uno de los niveles de energía constituye entonces un espacio propio 
+
+\begin{align*}
+    H_n=\bigoplus_{l=0}^{n-1}D_l
+\end{align*}
+
+Este espacio es de dimensión $n^2$
+
+$$
+\left(\sum_{l=0}^{n-1}(2l+1)=n^2\right)
+$$
+
+\textbf{Simetría adicional de Pauli, y degeneración a $l$:}
+
+Esto pareciera contradecir el teorema de Wigner
+
+De hecho no lo contradice, ya que el potencial tiene una forma muy particular, está en términos de $1/r$ y esto hace que haya una simetría más (descubierta por Pauli en $1925$), cuyo generador es:
+
+\begin{align*}
+    \hat{\vec{A}}=\frac{1}{2m}\left(\vec{p}\times\vec{L}-\vec{L}\times\vec{p}\right)-mK\frac{\vec{x}}{\abs{x}}
+\end{align*}
+
+con $K=\frac{e^2}{4\pi\epsilon}$ y $\vec{A}$ se conoce como el vector de Runge Lenz.
+
+Es posible verificar que:
+
+\begin{align*}
+    \left[A,H\right]=0
+\end{align*}
+
+El grupo de simetrías es ahora $SO(4)$ de dimensión $6$ y cada espacio propio $H$ es irreducible para esta simetría.
+
+Podemos romper esta simetría: correcciones relativistas. (rompen la simetría de $A$ pero no la invarianza rotacional)
+
+
 
