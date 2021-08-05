@@ -120,11 +120,95 @@ Tres categorías:
 \end{enumerate}
 
 
-Materia blanda:
+\textbf{Materia blanda:}
 
 \begin{itemize}
     \item Escalas de longitud: Desde escalas atómicas a escalas macroscópicas.
     \item Fluctuaciones
     \item Autoreorganización
+
+
+\item\textbf{Macroscópicas}
+
+\begin{itemize}
+    \item Polímeros
+    \item Interfaces
 \end{itemize}
 
+\item\textbf{Microscópicas}
+
+\begin{itemize}
+    \item Coloides
+    \item Geles 
+    \item Cristales líquidos
+\end{itemize}
+
+\end{itemize}
+
+\subsubsection*{Fluctuaciones y Movimiento Browniano}
+
+\begin{itemize}
+    \item Partes pequeñas que tienen movimiento aleatorio
+    \item Fluctuaciones térmicas
+\end{itemize}
+
+\subsection{Materia sólida} 
+
+Cristalografía clásica: Sistemas que se representan como puntos con patrons específicos.
+\begin{itemize}
+    \item Grupos de traslación (redes Bravais)
+    \item Traslación y simetría (grupos de Schontlis)
+\end{itemize}
+
+
+\subsection{Fases de la materia}
+
+\begin{tabular*}{0.8\textwidth}{l|rl}
+             & Ordenadas & No ordenadas\\
+             \hline
+     Clásica & Hielo de agua & Agua líquida\\
+     Cuántica & Ferromagnética\\
+                & Antiferromagnética\\
+\end{tabular*}
+
+\subsection{Conjuntos de puntos:}
+
+\begin{itemize}
+    \item Conjunto unitario: tiene un solo elementos.
+    \item La union contable de conjuntos unitarios suma un conjunto de puntos.
+    \item Un conjunto de puntos, $\Lambda\subset \mathbb{R}^d$, es un conjunto discreto si $x\in \Lambda$ tiene una vecindad abierta $U=U(x)\subset \mathbb{R}^d$ que no tiene ningún elemento de $\Lambda$.
+    \item Para cada $x\in\Lambda$, exite un radio de empaquetamiento $r>0$ tal que $B(r)$ es una hiperesfera de radio $r$ tal que $B_r(x) \cap \Lambda=\{x\}$.
+    \item Por otro lado, $\Lambda$ es uniformemente discreto si hay una vecindad abierta, $U$, de $0\in\mathbb{R}^d$ tal que $(x+U)\cap(y+U)=\emptyset$. Se cumple para todo $x,y\in\Lambda$ la suma y diferencia de Minkowski para dos conjuntos $U\pm V:=\left\{u\pm v \lvert u \in U,v\in V\right\}$
+    \item Para un conjunto discreto se tiene una distancia mínima entre puntos. Los subconjuntos de $\mathbb{Z}$ son uniformemente discretos. Pero podemos construir conjuntos discretos no uniformes, por ejemplo: $A=\left\{\frac{1}{n}\lvert n\in \mathbb{N}\right\}$
+    \item Un conjunto $\Lambda$ es localmente finito, si para todos los conjuntos $K\subset \mathbb{R}^d$, $K\cap\Lambda$ es un conjunto finito o $\emptyset$. 
+    ``Cuando $\Lambda$ es un conjunto de puntos, también es localmente finito si y solo si es discreto y cerrado.'' Además, $\Lambda$ es relativamente denso si existe un conjunto compacto $K\subset \mathbb{R}^d$ tal que $\Lambda+K=\mathbb{R}^d$.
+    \item Un conjunto de puntos $\Lambda\subset\mathbb{R}^d$ es un conjunto de Delone (Delany), ``un Delone'' si es uniformemente discreto y relativamente denso.
+    \item Para cualquier conjunto de Delone, $\Lambda\subset \mathbb{R}^d$ se puede elegir un radio de empaquetamiento $r$ y otro de ``recubrimiento'', $R$ tal que $U=B_r(0)$ (hiperesfera) y $K=\overline{B_R(0)}$ son vecindades apropiadas para confinar $\Lambda$.
+    \item Un conjunto de puntos $\Lambda\subset \mathbb{R}^d$ es un conjunto de Meyer, ``un Meyer'', si $\Lambda$ es relativamente denso y $\Lambda-\Lambda$ es uniformemente discreto.
+    \item Todos los conjuntos de Meyer son de Delone, pero no todos los conjuntos de Delone son de Meyer.
+\end{itemize}
+
+\textbf{Por ejemplo:}
+
+\begin{align*}
+    \Lambda&=\left\{n+\frac{1}{n}\rvert n \in \mathbb{Z}\backslash 0\right\}\\
+        &=\left\{2,2\frac{1}{2},3\frac{1}{3},\cdots\right\}
+\end{align*}
+
+\begin{itemize}
+    \item Es uniformemente discreto.
+    \item Tiene un radio de empaquetamiento $r=1/4$
+    \item Es relativamente denso
+    \item Radio de recubrimiento $R=2$
+\end{itemize}
+
+Es un conjunto de Delone.
+No es un conjunto de Meyer.
+
+\begin{itemize}
+    \item Un conjunto de puntos $\Gamma \subset \mathbb{R}^d$ son puntos de red (grid). O simplemente una red en $\mathbb{R}^d$ si existen $d$ vectores $\vec{b}_1,\cdots,\vec{b}_d$ tal que
+    $$
+        \Gamma=\mathbb{Z}b_1\oplus\cdots\oplus\mathbb{Z}b_d:=\left\{\sum_{i=1}^dm_ib_i\lvert\forall m_i\in\mathbb{Z}\right\}
+    $$
+    y que además, si $\mathbb{R}^d$ es generado por $\left\{b_1,\cdots,b_d\right\}$ es una base de la red $\Gamma$.
+\end{itemize}
