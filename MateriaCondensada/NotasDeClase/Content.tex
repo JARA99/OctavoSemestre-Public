@@ -210,5 +210,99 @@ No es un conjunto de Meyer.
     $$
         \Gamma=\mathbb{Z}b_1\oplus\cdots\oplus\mathbb{Z}b_d:=\left\{\sum_{i=1}^dm_ib_i\lvert\forall m_i\in\mathbb{Z}\right\}
     $$
-    y que además, si $\mathbb{R}^d$ es generado por $\left\{b_1,\cdots,b_d\right\}$ es una base de la red $\Gamma$.
+    y que además, si $\mathbb{R}^d$ es generado por $\left\{b_1,\cdots,b_d\right\}$ es una base de la red $\Gamma$. Es un conjunto de Meyer, y consecuentemente, es un conjunto de Delone.
 \end{itemize}
+
+\subsubsection{Celda de Voroni y celda de Delone:}
+
+Considere un conjunto de puntos localmente finito $\Lambda\subset \mathbb{R}^d$ y $\Lambda\neq\emptyset$. Entonces el dominio de Voronoi o celda de Voronoi para $a\in\Lambda$ es $V(a):=\left\{x\in\mathbb{R}^d\vert\norm{x-a}\leq\norm{x-b}\forall b\in\Lambda\right\} $
+
+Donde $\norm{\bullet}$ es la métrica euclideana.
+
+$V(a)$ es cerrada en volumen y es abierta en muchas ocasiones en las fronteras.
+
+$V(a)$ tiene un hipervolumen finito y no nulo.
+
+$V(a)$ no necesariamente es compacta. ($A\cup B=$Universo, $A\cap B=\emptyset),\Rightarrow A$ es compacto).
+
+La colección de todas las celdas de Voronoi forman una teselación cara a cara de $\mathbb{R}^d$.
+
+En particular, dos celdas de Voronoi distintas pueden intersectarse.
+
+El conjunto de celdas forma un espacio euclidano llamado Complejo de Voronoi.
+
+El dual geométrico del complejo de Voronoi, es otro conjunto de celdas de Delone y se llama Complejo de Delone.
+
+
+\subsection{Grupos finitos:}
+
+\begin{itemize}
+    \item En cristalografía son importantes los grupos de moléculas
+    \item Grupo lineal general en $\mathbb{R}^d$ $GL(d,\mathbb{R})$:
+    Todas las matrices de dimensión $d\times d$ y que todas sus entradas son invertibles.
+    \item Grupo ortonormal especial o grupo de rotación: el subgrupo de rotaciones que preservan la orientación.
+\end{itemize}
+
+\textbf{Grupos finitos más usados en cristalografía}
+\begin{itemize}
+    \item Grupo cíclico de orden $n$, $C_n$ que satisface que si $g^n=e$ entonces $g^{ln}=e\forall l \in \mathbb{Z}$ y $e:$ elemento neutro.
+    \item Grupo didral de orden $2n$:
+    $$D_n=\bra*{g,h}\ket*{g^n=h^2=(gh)^2=e}$$
+    \item 4-grupo de Kein.
+    $$D_2=C_2\times C_2$$
+    \item Grupo de permutación: tiene $n$ símbolos $S_n$, para $n>1$ su subgrupo de índice $2$ permutaciones se llama grupo alternado o alternante.
+    $$A_n=\left\{\sigma\in S_n:\norm{\sigma}\text{ es par}\right\}$$
+    \item Grupos de simetría de politopos regulares:
+    
+    \includegraphics[width=0.4\textwidth]{Graficas/Aug6-1.png}
+    \begin{itemize}
+        \item Grupo tetraedro $T_d\approxeq S_4$: rotaciones y reflecciones del tetraedro.
+        \item Grupo octaedro $O\approxeq S_4$: Preserva orientaciones de cubo y octaedro.
+        \item Grupo icosaedro $Y_h=Y\times C_2$: $Y$ subgrupo de rotaciones.
+    \end{itemize}
+\end{itemize}
+
+
+\subsection{Cálculo de las celdas de Voronoi y de Delone}
+
+Propiedades de la celda de Voronoi $V(a)$:
+
+\begin{enumerate}
+    \item Es una celda cerrada.
+    \item Hipervolumen no nulo.
+    \item No es necesariamente compacta.
+    \item Cada punto de conjunto de puntos tiene su propia celda.
+\end{enumerate}
+
+El conjunto de celdas de Voronoi forma un complejo de Voronoi, que es una teselación del espacio.
+
+El dual geométrico del complejo de Voronoi se llama complejo de Delone.
+
+Se llama celda de Voronoi en honor de Georgy  Voronoi (1868-1908).
+
+Se llama celda de Delone en honor a Boris Delone (1890-1980).
+
+
+\subsubsection{Algoritmo de Fortune}
+
+Propuesto por Steve Fortune. 
+
+\textit{Entrada:} El conjunto de puntos $\left\{p_1,\cdots,p_n\right\}$. El índice del punto donde se calcula 
+
+\textit{Salida:} La celda de Voronoi.
+
+\begin{enumerate}
+    \item Iniciar
+    \item $cell_i\leftarrow S$
+    \item $P_i\leftarrow (x_i,y_i)$
+    \item Para todos los puntos $i\neq j$ hacer:
+    \begin{enumerate}
+        \item $P_j\leftarrow (x_i,y_i)$
+        \item $R_j\leftarrow $ linea que une $P_i$ y $P_j$.
+        \item $PM_i\leftarrow$ punto medio entre $P_i$ y $P_j$.
+        \item $\bar{R}_j\leftarrow$ línea perpendicular a $R_j$ en $PM_i$
+        \item Hallar la intersección de $cell_i$ y $\bar{R}_j$.
+        \item Si $R_j$ y $L$ se cruzan en $0$ o $1$ punto, continua.
+        \item Si no, $cell_i\leftarrow$
+    \end{enumerate}
+\end{enumerate}
