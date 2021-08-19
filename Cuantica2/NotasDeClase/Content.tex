@@ -580,7 +580,7 @@ Objetivo: expresar la base $\ket{J,M}$ en función de $\ket{\pm,\pm}$.
     \item \textbf{Triplete}
     \begin{align*}
         \ket{J=1,M=1}&=\ket{++}\\
-        \ket{J=1,M=0}&=\\
+        \ket{J=1,M=0}&=\frac{1}{\sqrt{2}}\left(\ket{+-}+\ket{-+}\right)\\
         \ket{J=1,M=-1}&=\ket{--}\\
     \end{align*}
 \end{itemize}
@@ -600,6 +600,9 @@ Llamada descomposición de Clebsch - Gordon. La dimensión de los espacios es:
 \begin{align*}
     J=\abs{\frac{1}{2}+\frac{1}{2}}=1
 \end{align*}
+\begin{align*}
+    J=\abs{\frac{1}{2}-\frac{1}{2}}=0
+\end{align*}
 
 Los coeficientes que acompañan a $\ket{\pm\pm}$ en la expresión del triplete y singlete se llaman coeficientes de Clebsch Gordon.
 
@@ -607,3 +610,191 @@ Los coeficientes que acompañan a $\ket{\pm\pm}$ en la expresión del triplete y
 \includegraphics{Graficas/G1-Aug9.png}
 
 
+\subsection{Consecuencias en el espectro de $\hat{H}$}
+
+Los niveles de energía de la partícula compuesta están dados por el espectro de $\hat{H}$ que tiene entonces $2$ niveles de energía: $E_j=0$, $E_j=1$ de multiplicidad $1$ y $3$ respectivamente.
+
+Por ejemplo, para $\hat{H}=K \vec{S}_1\cdot\vec{S}_2=k\frac{1}{2}\vec{S}^2-\vec{S}_1^2-\vec{S}_2^2$
+
+Autovectores: singlete y los vectores del triplete.
+
+\begin{align*}
+    \hat{H}\left(\frac{1}{\sqrt{2}}\left(\ket{+-}-\ket{-+}\right)\right)&=\\
+    &\vdots\\
+    &=\frac{K}{\sqrt{2}}\left(\frac{3}{4}\hbar^2\ket{-+}-\frac{3}{4}\hbar^2\ket{+-}\right)
+\end{align*}
+
+$E_{J=0}=-\frac{3}{4}K\hbar^2$
+
+$E_{J=1}=\frac{1}{4}K\hbar^2$
+
+Démonos cuenta que diagonalizamos al operador 
+
+
+\subsubsection{Aplicación}
+La línea de $21cm$ del hidrógeno. 
+
+En el caso del átomo de hidrógeno, el estado $1s$ está formado por 4 estados dados por la interacción entre los espines del electrón y el protón.
+
+La diferencia de energía aquí: $\Delta E = E_1-E_o=6E-6eV$
+
+a esto le llamamos la estructura hiperfina del estado $1s$.
+
+Si un átomo de hidrógeno se encuentra en el estado de energía $E_1$, este no es por fuerza un estado estacionario por interacción con el campo electromagnético y se desexcita al estado fundamental $E_o$ por emisión espontánea con vida media muy larga: $\tau \approx 10E7\hat{a}$
+
+El fotón producido es de energía $\Delta E $ al cual le corresponde una longitud de onda $\lambda=21cm$.
+
+En el gas interestelar formado por hidrógeno, las colisiones entre átomos son responsables de una temperatura $\tau\approx100K\Rightarrow k_bT=10E-2eV$
+
+\subsection{Descomposición general de momenta angulares:}
+
+Ver cómo se acoplan 2 partículas con momentum angular $j_1$ y $j_2$. Están interactuando por medio de un hamiltoniano $\hat{H}$ que es invariante ante rotaciones globales del sistema.
+
+
+Niveles de energía corresponden a las reprecentaciones irreducibles del grupo de rotación $D_j$. 
+
+\textbf{Objetivo:} saber cómo el espacio de Hilbert se descompone en representaciones irreducibles $D_J$:
+
+
+\begin{align*}
+    D_{j_1}\otimes D_{j_2}=\bigoplus_{J=\abs{j_1-j_2}}D_J
+\end{align*}
+
+
+
+\subsubsection{Aplicación: simetría de isoespín}
+Veamos la utilidad de los coeficientes de Clebsch-Gordon para:
+
+$$
+    D_1\otimes D_{1/2}=D_{J=\frac{1}{2}}\oplus D_{J=3/2}
+$$
+
+No vamos a aplicar simetría rotacional, sino la de sioesín, de física nuclear, es la del grupo $SU(2)$.
+
+Poniendo en un lado el valor de la carga eléctrica $Q$, el protón y el neutrón tienen propiedades muy similares:
+
+$m_n=940MeV$
+
+$m_p=939Mev$
+
+y se comportan de manera muy similar con las interacciones nucleares.
+
+\textbf{1930}: Heisenberg hace una hipótiesis: el protón y el neutrón tienen la misma naturaleza: son la misma partícula: nucleón.
+
+La carga positiva, o la carga neutra corresponden a 2 estados disntintos: $\ket{p},\ket{n}$ esto sería un grado de libertad más.
+
+El estado de un nucleón está descrito por un espacio de dimensión 2 cuya base: $\ket{p},\ket{n}$:$D_{j=1/2}$.
+
+Dado que la fuerza nuclear no distingue entre protones y neutrones, Heisenberg postula que la fuerza nuclear tiene una simetría respecto a la mezcla de estos dos estados.
+$\Rightarrow$ hay una invarianza por el grupo $SU(2)$.
+
+A esta invarianza se le conoce como simetría de isoespín.
+
+Unicamente, la fuerza electromagnética hace la distinción entre los dos estados. Esta fuerza rompe la simetría. Pero, la fuerza electromangética es mucho menor a la fuerza nuclear, eso explicaría en la visión de Heisenberg, la diferencia de masas.
+
+En el espaicio $D_{1/2}$ el operador de carga eléctrica sería:
+
+\begin{align*}
+    \hat{Q}=\begin{pmatrix}
+        1&0\\0&0
+    \end{pmatrix}
+\end{align*}
+
+Otras partículas nucleares han sido descubiertas, los piones, $\pi^+,\pi^0,\pi^-$ de cargas respectivas $+1,0,-1$.
+
+En la hipótesis de Heisenberg, estas serían la misma partícula: el pión.
+
+Tendríamos 3 posibilidades $\Rightarrow D_{j=1}$ de dimensión 3.
+
+Es la fuerza electromagnética la responsable de distinguir entre $\ket{\pi^{\pm,0}}$.
+
+\textbf{Reacciones entre piones y nucleones:}
+
+$p+\pi^-\rightarrow n +\pi^0$
+
+Resulta que considerar a la simetría de isoespín, permite el cálculo de secciones eficaces.
+
+La sección eficaz es proporcional a la probabilidad de la reacción:
+
+\begin{align*}
+    \sigma(N+\pi\rightarrow N'+\pi')=\abs{\bra*{N',\pi'}\hat{U}\ket*{N,\pi}}^2
+\end{align*}
+
+$\hat{U}$ es un operador de difusión.
+
+\textit{Ejercicio:}
+
+1. Un estado $\ket{N,\pi}$ se describe por un vector en el espacio 
+
+
+
+\subsubsection{Reglas de selección y el teorema de Wigner-Eckardt}
+Aplicación del momentum angular en espectroespín.
+
+Considerar a un átomo aislado sometido a una onda electromagnética plana de frecuencia $\omega$.
+
+Por teoría de perturbaciones, vemos que hay transiciones entre los orbitales $(n,l,m)$, absorbiendo o emitiendo un fotón.
+
+La probabilidad de transición de $a=(n,l,m)$ hacia $b=(n',l',m')$ está dada por:
+
+\begin{align*}
+    P_{a\rightarrow b}(t)\approx \frac{I}{2\epsilon_oc\hbar^2}\abs{D_{ba}}^2\cos^2\theta F(t,\omega_{ba}\pm \omega)
+\end{align*}
+
+\begin{align*}
+    \abs*{D_{ba}}^2= l^2\abs{\bra*{n',l',m'}\vec{x}\ket{n,l,m}}^2
+\end{align*}
+
+\textbf{Regla de selección:}
+
+Aunque los estados cuánticos orbitales $(n,l,m)$ son, por lo general, difíciles de calcular en un átomo con varios electrones,
+un simple argumento de simetría, llamado regla de selección muestra que el elemento de matriz es nulo excepto cuando $l'=l\pm 1$
+
+Las transiciones posibles en el espectro atómico:
+
+\includegraphics[width=0.4\textwidth]{Graficas/Aug19-1.png}
+
+El elemento de matriz hace que intervengan 3 objetos que pertenecen a representaciones irreducibles de $SO(3)$:
+
+\begin{align*}
+    \ket{n,l,m}&\in D_l\\
+    \ket{n',l',m'}&\in D_l'\\
+\end{align*}
+
+Y el operador $\vec{x}\in D_1$
+
+El elemento de matriz es el producto interno entre los vectores $$\vec{x}\ket{n,l,m}\in D_1\otimes D_l=D_{l-1}\otimes D_{l}\otimes D_{l+1}$$
+
+Y del vector
+$$ \ket{n',l',m'}\in D_{l'}$$
+
+Dado que vectores que pertenecen a rep irreducibles distintas son ortogonales, para que el elemento de matriz no sea cero:
+\begin{align*}
+    l'&=l-1&l'&=l&l'&=l+1
+\end{align*}
+
+El caso $l=l'$ se excluye por otra simetría, la simetría de paridad, gupo $\mathbb{Z}_2={\mathbb{1,-1}}$
+
+Es una simetría en el átomo ya que $V(\vec{x})=V(-\vec{x})$.
+
+El operador $\vec{x}$ es impar (paridad -1) y $\ket{n,l,m}$ es de paridad $(-1)^2$.
+
+\subsubsection{Teorema de Wigner-Eckardt}
+
+\textbf{Definiciones:}
+
+\begin{itemize}
+    \item \textbf{Operador vectorial} es un conjunto de operadores $\vec{O}=(O_1,O_2,O_3)$ sobre el cual una rotación lo transforma en un vector en $D_{l=1}$
+    \item \textbf{Operador escalar} es un operador invariante bajo el efecto de rotaciones.
+    \item \textbf{Operador tensorial irreducible} de rango $j$ es un conjunto de $2j+1$ operadores denotados por $T_j:=(T_{j,m''})_{m''=-j\rightarrow j}$ sobre el cual actúa el grupo $SO(3)$ de rotaciones (o $SU(2)$) y que se transforma como un vector de $2j+1$ componentes de la rep irreducible $D_j$.
+    \item \textbf{Operador tensorial} es un cojunto de operadores sobre el cual actúa $SO(3)$ o $SU(2)$ y que bajo el efecto de una rotación, se transforma como un vectore de una reprresentación del gurpo de rotación (no por fuerza irreducible).
+\end{itemize}
+
+\textbf{Teorema} Si $D_l'$ no está presente en la descomposición 
+
+$$
+D_l''\otimes D_l = \bigoplus_{\abs*{l-l''}}^{\abs{l+l''}}D_k
+$$
+ entonces los elementos de matriz son nulos (regla de selección)
+
+ Si $D_{l'}$ está presente en la descomposición entonces el elemento de metriz en cuestión es no nulo y se expresa gracias a los coeficientes de Clebsch-Gordon.
