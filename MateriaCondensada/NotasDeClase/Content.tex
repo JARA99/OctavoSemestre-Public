@@ -377,9 +377,43 @@ La estructura cristalina se estudia mediante las redes de Bravais.
 \textbf{Simetrías:}
 
 \begin{itemize}
-    \item[nel] Continuas: Grupos de Lie.
-    \item[si] Discretas: Grupos finitos.
+    \item[\texttimes] Continuas: Grupos de Lie.
+    \item[\checkmark] Discretas: Grupos finitos.
 \end{itemize}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.4\textwidth]{Graficas/Aug20.png}
+    \caption{Tabla }
+    \label{fig:TablaAug20}
+\end{figure}
+
+\subsection{Planos cristalinos}
+\begin{itemize}
+    \item La orientación de un plano está determinada por tres puntos en el plano.
+    \item Si cada punto está en un eje distinto, el plano se puede especificar dando las coordenadas del punto.
+    \item Segun el procedimiento de Kittel
+    \begin{enumerate}
+        \item Hallar los interceptos con los ejes en términos de las constantes de la red. Los ejes pueden ser los de la celda primitiva o no.
+        \item Tomar los recíprocos de esos números y reducirlos a los tres enteros con la misma razón.
+        \item El plano se denota con la triada de estos números (que se llaman ``índices del plano'').
+    \end{enumerate}
+    \textbf{Ejemplo:}
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.4\textwidth]{Graficas/Aug20-2.png}
+    \end{figure}
+    \item \textbf{Indices de Miller}
+    \begin{itemize}
+        \item La correspondencia entre los vectores primitivos y los índices de planos es una forma conveniente
+        \item Los índices de Miller son las coordenadas del vector recíproco más pequeño y normal al plano.
+        \item Los índices $(h,k,l)$ describen al plano normal al vector $h\vec{b}_1+k\vec{b}_2+l\vec{b}_3$
+        \item Convensión: Los planos de una red se expresan en términos de los índices de Miller.
+    \end{itemize}
+\end{itemize}
+
+
+
 
 % \section{Planos Cristalinos}
 
