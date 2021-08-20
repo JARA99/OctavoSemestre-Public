@@ -1,0 +1,7 @@
+PWD /home/jorgealejandro/Documents/Tareas/2021/OctavoSemestre-Public/Cuantica2/NotasDeClase
+INPUT /etc/texmf/web2c/texmf.cnf
+INPUT /usr/share/texmf/web2c/texmf.cnf
+INPUT /usr/share/texlive/texmf-dist/web2c/texmf.cnf
+INPUT /var/lib/texmf/web2c/pdftex/pdflatex.fmt
+INPUT /home/jorgealejandro/Documents/Tareas/2021/OctavoSemestre-Public/Cuantica2/NotasDeClase/Preamble.tex
+OUTPUT /home/jorgealejandro/Documents/Tareas/2021/OctavoSemestre-Public/Cuantica2/NotasDeClase/Preamble.log
