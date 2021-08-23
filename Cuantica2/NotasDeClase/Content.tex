@@ -797,6 +797,105 @@ D_l''\otimes D_l = \bigoplus_{\abs*{l-l''}}^{\abs{l+l''}}D_k
 $$
  entonces los elementos de matriz son nulos (regla de selección)
 
- Si $D_{l'}$ está presente en la descomposición entonces el elemento de metriz en cuestión es no nulo y se expresa gracias a los coeficientes de Clebsch-Gordon.
+ Si $D_{l'}$ está presente en la descomposición entonces el elemento de matriz en cuestión es no nulo y se expresa gracias a los coeficientes de Clebsch-Gordon.
 
  
+
+ \chapter{Métodos de aproximación}
+
+ \textbf{Interés:}
+ \begin{itemize}
+     \item Muchas veces son indispensables, sin estos, el problema puede ser irresoluble.
+     \item Algunas veces permiten entender mejor fenómenos simples.
+ \end{itemize}
+
+ \textbf{Dos tipos de problemas:}
+
+ \begin{enumerate}
+     \item Problemas estacionarios: $\hat{H}$ independiente del tiempo. Objetivo: calcular el espectro de $\hat{H}$. (idea: resolver el estado fundamental: método variacional.)
+     \item Problema de evolución: Tenemos $\psi(0)\rightarrow$ calcular la evolución a $\psi(t)$.
+ \end{enumerate}
+
+
+\section{Teoría de perturbaciones estacionarias:}
+
+\textbf{Idea:} 
+
+$$\hat{H}=\hat{H}_o+\lambda\hat{H}_1$$
+
+$\lambda$ pequeño, $H_1$ se le conoce como perturbación
+
+Resolvemos por medio de series de potencias en $\lambda$.
+
+\textbf{Objetivo:} Encontrar el espectro de $\hat{H}$
+
+\begin{align*}
+    \hat{H}\ket{\psi_n(\lambda)}=E_n(\lambda)\ket{\psi_n(n)}
+\end{align*}
+
+Notemos que $\hat{H}(0)=\hat{H}_o$ es un hamiltoniano del cual conocemos el espectro.
+
+
+
+$\hat{H}_1$ es un operador llamado perturbación del cual conocemos los elementos de matriz en la base $\{\ket{n}\}$:
+
+\begin{align*}
+    \bra{n'}H_1\ket{n}, ~~~ n,n'\geq 0
+\end{align*}
+
+Buscamos entonces calcular los autovalores $E_n(\lambda)$ y las componentes de los autovectores $\ket{\psi_n(\lambda)}$ en la base $\{\ket{n}\} $ para $\lambda<<1$.
+
+\textbf{Nota:} puede ser que se de la igualdad en:
+
+\begin{align*}
+    \epsilon_o\leq\epsilon_1\leq\cdots
+\end{align*}
+En particular aquí $\epsilon$ es un degenerado de multiplicidad $N$.
+
+\subsection{Caso no degenerado:}
+\textbf{Proposición:} Si $\epsilon_n$ es un autovalor no-degenerado de $H_o$ (n fijo) entonces para $\lambda<<1$.
+
+\begin{align*}
+    E_n(\lambda)&=\epsilon_n+\lambda E^{(1)}+\lambda^2E^{(2)}+\cdots\\
+    \ket{\psi_n(\lambda)}&= \ket{n}+\lambda\ket{\psi^{(1)}}+\lambda^2\ket{\psi^{(2)}}+\cdots
+\end{align*}
+
+donde la corrección de primer orden:
+
+\begin{align*}
+    E^{(1)}&=\bra{n}H_1\ket{n}:\text{ corrección de primer orden de la energía.}\\
+    \bra{n'}\ket*{\psi^{(1)}}&=\frac{\bra{n}H_1\ket{n}}{\epsilon_n-\epsilon_{n'}}\text{: corrección a primer orden del estado.}
+\end{align*}
+
+Y a segundo orden:
+
+\begin{align*}
+    E^2=\sum_{n'\neq n}\frac{\abs*{\bra{n'}H_1\ket{n}}^2}{\epsilon_n-\epsilon_{n'}}
+\end{align*}
+
+\textbf{Nota:} El vector $\ket{\psi^(1)}$ está expresado por componentes:
+\begin{align*}
+    \ket{\psi^{(1)}}=\sum_{n'\neq n}\ket{n'}\bra{n'}\ket{\psi^{(1)}}=\sum_{n'\neq n}\ket{n'}\bra{n'}H_1\ket{n}/(\epsilon_n-\epsilon_{n'})
+\end{align*}
+
+Para el nivel de energía fundamental, $\epsilon_o$, tenemos que $(\epsilon_o-\epsilon_{n'})<0\Rightarrow E^{(2)}\leq 0$
+
+\textbf{Prueba:} Expandir la ecuación de Schrodinger en series de potencias. Y agrupar por los órdenes de lambda. Aplicar un ket $n$ o $n'$ y ``despejar''.
+
+\textbf{Ejemplo:} vibración anharmónica de un átomo:
+
+\begin{align*}
+    \hat{H}=\frac{\vec{p}^2}{2m}+\frac{1}{2}kx^2+\lambda x^4
+\end{align*}
+
+Aquí $H_o$ es el oscilador armónico y $\lambda H_1$ la perturbación.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\textwidth]{Graficas/Aug23-1.png}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\textwidth]{Graficas/Aug23-2.png}
+\end{figure}
