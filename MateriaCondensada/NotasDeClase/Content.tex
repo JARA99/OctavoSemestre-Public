@@ -388,7 +388,9 @@ La estructura cristalina se estudia mediante las redes de Bravais.
     \label{fig:TablaAug20}
 \end{figure}
 
-\subsection{Planos cristalinos}
+
+\section{Planos Cristalinos}
+
 \begin{itemize}
     \item La orientación de un plano está determinada por tres puntos en el plano.
     \item Si cada punto está en un eje distinto, el plano se puede especificar dando las coordenadas del punto.
@@ -403,21 +405,52 @@ La estructura cristalina se estudia mediante las redes de Bravais.
         \centering
         \includegraphics[width=0.4\textwidth]{Graficas/Aug20-2.png}
     \end{figure}
-    \item \textbf{Indices de Miller}
-    \begin{itemize}
-        \item La correspondencia entre los vectores primitivos y los índices de planos es una forma conveniente
-        \item Los índices de Miller son las coordenadas del vector recíproco más pequeño y normal al plano.
-        \item Los índices $(h,k,l)$ describen al plano normal al vector $h\vec{b}_1+k\vec{b}_2+l\vec{b}_3$
-        \item Convensión: Los planos de una red se expresan en términos de los índices de Miller.
-    \end{itemize}
 \end{itemize}
 
 
+\section{Indices de Miller}
 
+\begin{itemize}
+    \item La correspondencia entre los vectores primitivos y los índices de planos es una forma conveniente
+    \item Los índices de Miller son las coordenadas del vector recíproco más pequeño y normal al plano.
+    \item Los índices $(h,k,l)$ describen al plano normal al vector $h\vec{b}_1+k\vec{b}_2+l\vec{b}_3$
+    \item Convención: Los planos de una red se expresan en términos de los índices de Miller.
+\end{itemize}
 
-% \section{Planos Cristalinos}
+Coordenadas del vector recíproco más pequeño y normal al plano $(h,k,l)$ entonces el vector es:
 
-% \section{Indices de Miller}
+$$
+h\hat{b}_1+k\hat{b}_2+l\hat{b}_3
+$$
+
+\begin{itemize}
+    \item Las direcciones de la red también se pueden expresar como $[n_1~n_2~n_3]$ y describen al punto en la dirección:
+    $$\vec{R}=n_1\hat{a}_1+n_2\hat{a}_2+n_3\hat{a}_3$$
+    \item También hay familias de planos. (Tarea, buscar las definiciones de familia de planos).
+    
+    Por ejemplo: La familia $\{100\}$ en un cristal cúbico simple incluye los planos $(1~0~0)$, $(0~1~0)$ y $(0~0~1)$.
+\end{itemize}
+
+\subsection{Factor de empaquetamiento atómico (FEA, APF atomic packing factor)}
+
+Es la fracción del volumen ocupado:
+
+\begin{equation}
+    FEA=\frac{N_{\text{átomos}}V_{\text{átomos}}}{V_{celda}}
+\end{equation}
+
+Celda primitiva: hay un átomo.
+
+Otras celdas: hay más de un átomo.
+
+\subsection{Formas de caracterizar la red:}
+\begin{itemize}
+    \item Direcciones de la red.
+    \item Indices de Miller.
+    \item Número de coordinación (próximos vecinos).
+    \item Factor de empaquetamiento.
+\end{itemize}
+
 
 % \section{Análisis cristalográfico}
 
