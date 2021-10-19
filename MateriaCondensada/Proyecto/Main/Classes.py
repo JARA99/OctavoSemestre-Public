@@ -26,14 +26,17 @@ class Particle:
         self.charge = q
 
     def PrintData(self, data):
-        switch = {
-            'ID': print(self.ID),
-            'radious': print(self.radius),
-            'position': print(self.position),
-            'velocity': print(self.velocity),
-            'aceleration': print(self.aceleration),
-            'mass': print(self.mass),
-            'charge': print(self.charge)
-        }
 
-        return switch.get(data, 'Valid inputs are: ID, radious, position, velocity, aceleration, mass, charge')
+        '''
+        Prints the requested data on a terminal. 
+        Possible inputs are: \'ID\', \'radious\', \'position\', \'velocity\', \'aceleration\', \'mass\', \'charge\'.
+        '''
+
+        if      data == 'ID':           print(self.ID)
+        elif    data == 'radious':      print(self.radius)
+        elif    data == 'position':     print(self.position)
+        elif    data == 'velocity':     print(self.velocity)
+        elif    data == 'aceleration':  print(self.aceleration)
+        elif    data == 'mass':         print(self.mass)
+        elif    data == 'charge':       print(self.charge)
+        else:                           print('Valid inputs are: ID, radious, position, velocity, aceleration, mass, charge.')
