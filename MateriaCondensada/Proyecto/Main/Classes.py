@@ -40,3 +40,6 @@ class Particle:
         elif    data == 'mass':         print(self.mass)
         elif    data == 'charge':       print(self.charge)
         else:                           print('Valid inputs are: ID, radious, position, velocity, aceleration, mass, charge.')
+
+    def PrintAll(self):
+        print(self.ID,self.radius,self.position,self.velocity,self.aceleration,self.mass,self.charge)
