@@ -1,0 +1,80 @@
+\chapter{Estadística cuántica}
+
+\subsection{Descripción de un ensamble estadístico de estados cuánticos por el operador densidad}
+
+\subsection{Definición del operador Densidad}
+
+En mecánica clásica, en principio, podemos conocer totalmente a un sistema. Ya que está regido por leyes deterministas (podemos conocer su pasado y su futuro).
+
+Pero, hay sistemas caóticos (sensibles a condiciones iniciales). $\Rightarrow$ este determinismo sea un poco iluso. Se considera al caos como una fuente de azar.
+
+$\Rightarrow$ se requiere de una descripción probabilística de un sistema, aún con pocos grados de libertad.
+
+En el caso más sencillo, donde tenemos a los estados de una partícula $(\vec{x}_i,\vec{p}_i)$ cada uno con probabilidad $P_i$ y $\sum_i P_i =1$, o bien usando una distribución de probabilidad, $P(\vec{x},\vec{p})$ en el espacio de fases para describir de forma probabilística del estado de una partícula.
+
+Esto es un ensamble de estados clásicos.
+
+\bigskip
+
+\textbf{Contraparte cuántica:}
+
+Un sistema cuántico tiene otra componente de azar $\rightarrow$ interacción con el ambiente. Este azar es intrínseco de la naturaleza.
+
+\bigskip
+
+\textbf{El postulado de la medición}
+
+Una partícula cuántica se describe por un $\psi\in\mathbb{H}$. Si $\hat{A}$ es un operador (autoadjunto) asociado a un observable, cuyo espectro es $(a_j)_j$. Entonces la medición de $A$ en el estado $\psi$ tiene como resultado $a_j$ con probabilidad:
+
+\begin{align*}
+    P_\psi(a_j)=\frac{\abs{\abs{P_j\psi}}^2}{\abs{\abs{\psi}}^2}=\frac{\bra{\psi}P_j\ket{\psi}}{\bra{\psi}\ket{\psi}}
+\end{align*}
+
+$P_j$ es el proyector espectral sobre el espacio propio $a_j$. Podemos vlover a formular el postulado de la medición:
+
+\bigskip
+
+\textbf{Postulado de la medición}
+
+Luego de una medición, el sistema cuántico $\psi$ está descrito por la superposición estadística de estados $P_j\psi$ cada una con probabilidad:
+
+\begin{align*}
+    P_\psi(a_j)=\frac{\abs{\abs{P_j\psi}}^2}{\abs{\abs{\psi}}^2}=\frac{\bra{\psi}P_j\ket{\psi}}{\bra{\psi}\ket{\psi}}
+\end{align*}
+
+Insistir en el hecho que estas probabilidades $P_\psi(a_j)$ para todos los observables $\hat{A}$ caracterizan al sistema físico, en el sentido que son los valores accesibles experimentalmente y es la única forma de contrastar el experimento con la teoría.
+
+Valor esperado:
+
+\begin{align*}
+    A _\psi = \sum_j P_\psi (a_j)\cdot a_j=\frac{\bra{\psi}A\ket{\psi}}{\bra{\psi}\ket{\psi}}
+\end{align*}
+
+Queremos estudiar la posibilidad de que exista también una componente de azar del desconocimiento del sistema.
+
+En vez de considerar a un único estado cuántico $\psi\in\mathcal{H}$ queremos considerar a un ensamble estadístico de estados. $\psi_j\in\mathcal{H}$ con probabilidad $p_i$ tales que la suma es $1$.
+
+Por el postulado de la medición, para medir $a\hat{A}$ en el valor $a_j$
+
+\begin{align*}
+    p(a_j)=\sum_i p_ip_\psi(a_j)
+\end{align*}
+
+\begin{align*}
+    A = \sum_i p(a_j)a_j=\sum_i p_i \frac{\bra{\psi_i}A\ket{\psi_i}}{\bra{\psi_i}\ket{\psi_i}}
+\end{align*}
+
+Esta presencia de 2 fuentes de azar es incómoda, esta definición permite simplificar el formalismo.
+
+\bigskip
+
+\textbf{Definición:} Para un ensamble estadístico de los estados $\psi_i\in\mathcal{H}, i=1,2,3,\cdots$ con probabilidades respectivas $p_i$, al operador densidad asociado es:
+
+\begin{align*}
+    \hat{\rho}&:=\sum_i P_iP_{\psi_i}&
+\end{align*}
+
+
+También conocido como matriz densidad o estado cuántico, donde $P_j$ es el proyector ortogonal de rango 1 sobre el estado $\psi_i$.
+
+En el caso particular de un solo estado, $\psi$
