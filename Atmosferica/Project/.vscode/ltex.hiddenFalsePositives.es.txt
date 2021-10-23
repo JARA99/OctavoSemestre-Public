@@ -1,0 +1,1 @@
+{"rule":"MORFOLOGIK_RULE_ES","sentence":"^\\QEste folder contiene información pública sobre el proyecto realizado.\\E$"}
