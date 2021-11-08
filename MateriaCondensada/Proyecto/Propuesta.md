@@ -85,3 +85,6 @@ Para esta librería es muy importante acordar la sintaxis que se utilizará, ya 
 
 ### Main
 Función principal que va a ejecutar en orden las funciones anteriores. Se encargará de leer la hoja de parámetros para asignar los valores adecuados en las funciones.
+
+##  Generador de gráficas
+Este sería un código sencillo de gnuplot que plotee los puntos utilizando círculos con el radio deseado, además un vector de velocidad centrado en este. Utilizando una terminal gif se pueden animar los plots utilizando un ```for``` para repetir el mismo código para los distintos bloques de datos.
